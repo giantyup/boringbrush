@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Mutants placeholder">
+  <rect width="800" height="600" fill="#A1E4F4"/>
+  <g fill="#4F3869" stroke="#211E1C" stroke-width="6">
+    <ellipse cx="400" cy="330" rx="170" ry="185"/>
+    <ellipse cx="280" cy="250" rx="48" ry="58"/>
+    <ellipse cx="520" cy="250" rx="48" ry="58"/>
+  </g>
+  <ellipse cx="400" cy="380" rx="120" ry="120" fill="#E4C9A3" stroke="#211E1C" stroke-width="6"/>
+  <circle cx="355" cy="320" r="20" fill="#4CAF50" stroke="#211E1C" stroke-width="4"/>
+  <circle cx="445" cy="320" r="12" fill="#F09F29" stroke="#211E1C" stroke-width="4"/>
+  <path d="M340 360 q20 30 -10 50" fill="none" stroke="#4CAF50" stroke-width="8" stroke-linecap="round"/>
+  <ellipse cx="400" cy="405" rx="46" ry="34" fill="#CAB18E" stroke="#211E1C" stroke-width="5"/>
+  <path d="M362 438 q38 30 76 6" fill="none" stroke="#211E1C" stroke-width="6" stroke-linecap="round"/>
+  <g>
+    <rect x="60" y="60" width="240" height="14" rx="7" fill="#A5251B"/>
+    <rect x="60" y="60" width="192" height="14" rx="7" fill="#F09F29"/>
+    <rect x="60" y="60" width="144" height="14" rx="7" fill="#4CAF50"/>
+    <rect x="60" y="60" width="96" height="14" rx="7" fill="#2196F3"/>
+    <rect x="60" y="60" width="48" height="14" rx="7" fill="#4F3869"/>
+  </g>
+  <text x="400" y="565" font-family="Georgia, serif" font-size="34" font-weight="bold" fill="#211E1C" text-anchor="middle">Mutants</text>
+</svg>

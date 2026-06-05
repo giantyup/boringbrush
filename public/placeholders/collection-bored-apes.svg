@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Bored Apes placeholder">
+  <rect width="800" height="600" fill="#A1E4F4"/>
+  <g fill="#686663" stroke="#211E1C" stroke-width="6">
+    <ellipse cx="400" cy="330" rx="170" ry="185"/>
+    <ellipse cx="280" cy="250" rx="48" ry="58"/>
+    <ellipse cx="520" cy="250" rx="48" ry="58"/>
+  </g>
+  <ellipse cx="400" cy="380" rx="120" ry="120" fill="#E4C9A3" stroke="#211E1C" stroke-width="6"/>
+  <rect x="338" y="312" width="34" height="10" rx="5" fill="#211E1C"/>
+  <rect x="428" y="312" width="34" height="10" rx="5" fill="#211E1C"/>
+  <ellipse cx="400" cy="400" rx="46" ry="34" fill="#CAB18E" stroke="#211E1C" stroke-width="5"/>
+  <path d="M360 440 q40 24 80 0" fill="none" stroke="#211E1C" stroke-width="6" stroke-linecap="round"/>
+  <g>
+    <rect x="60" y="60" width="240" height="14" rx="7" fill="#A5251B"/>
+    <rect x="60" y="60" width="192" height="14" rx="7" fill="#F09F29"/>
+    <rect x="60" y="60" width="144" height="14" rx="7" fill="#4CAF50"/>
+    <rect x="60" y="60" width="96" height="14" rx="7" fill="#2196F3"/>
+    <rect x="60" y="60" width="48" height="14" rx="7" fill="#4F3869"/>
+  </g>
+  <text x="400" y="565" font-family="Georgia, serif" font-size="34" font-weight="bold" fill="#211E1C" text-anchor="middle">Bored Apes</text>
+</svg>

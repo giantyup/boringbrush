@@ -1,26 +1,106 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/*
+  BoringBrush design tokens.
+  Palette is inspired by the ape reference art: sky-blue grounds, deep ink
+  outlines, cream/tan cards, charcoal text, and rainbow micro-accents.
+*/
+@theme {
+  --color-sky: #a1e4f4;
+  --color-sky-soft: #c4eefa;
+  --color-ink: #211e1c;
+  --color-charcoal: #686663;
+  --color-warm-gray: #8c8b89;
+  --color-studio-grey: #b8b7b5;
+  --color-cream: #e4c9a3;
+  --color-cream-light: #f0ddc2;
+  --color-sand: #cab18e;
+  --color-taupe: #8a755c;
+  --color-gold: #f09f29;
+  --color-red: #a5251b;
+  --color-purple: #4f3869;
+
+  --color-background: #a1e4f4;
+  --color-foreground: #211e1c;
+
+  --font-display: var(--font-fraunces), Georgia, serif;
+  --font-sans: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
+
+  --radius-card: 1.25rem;
+
+  --shadow-card: 0 2px 0 0 #211e1c, 0 10px 24px -12px rgba(33, 30, 28, 0.45);
+  --shadow-lift: 0 4px 0 0 #211e1c, 0 22px 40px -16px rgba(33, 30, 28, 0.55);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  body {
+    background-color: var(--color-sky);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    color: var(--color-ink);
+    letter-spacing: -0.01em;
+  }
+
+  ::selection {
+    background-color: var(--color-gold);
+    color: var(--color-ink);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer utilities {
+  /* Recurring rainbow accent inspired by the avatar's suspenders. */
+  .bb-rainbow {
+    background: linear-gradient(
+      90deg,
+      #a5251b 0%,
+      #f09f29 25%,
+      #4caf50 50%,
+      #2196f3 75%,
+      #4f3869 100%
+    );
+  }
+
+  .bb-text-stroke {
+    -webkit-text-stroke: 1.5px var(--color-ink);
+  }
+
+  /* Painted/rainbow edge effect used on primary buttons. */
+  .bb-paint-edge {
+    position: relative;
+    isolation: isolate;
+  }
+
+  .bb-paint-edge::before {
+    content: "";
+    position: absolute;
+    inset: -3px;
+    border-radius: inherit;
+    background: linear-gradient(
+      90deg,
+      #a5251b,
+      #f09f29,
+      #4caf50,
+      #2196f3,
+      #4f3869
+    );
+    opacity: 0;
+    transition: opacity 0.25s ease;
+    z-index: -1;
+  }
+
+  .bb-paint-edge:hover::before {
+    opacity: 1;
+  }
 }
