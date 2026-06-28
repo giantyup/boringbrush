@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { RainbowStripe } from "@/components/ui/rainbow-stripe";
+import { Logo } from "@/components/brand/logo";
 import { SITE, SOCIALS } from "@/lib/site";
 
 export function Footer() {
@@ -14,12 +15,7 @@ export function Footer() {
       <RainbowStripe className="rounded-none" />
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-12 sm:px-6 md:grid-cols-4">
         <div className="md:col-span-2">
-          <div className="flex items-center gap-2">
-            <span className="flex h-9 w-9 items-center justify-center rounded-full border-2 border-cream-light bg-gold text-lg font-black text-ink">
-              B
-            </span>
-            <span className="font-display text-xl font-bold">BoringBrush</span>
-          </div>
+          <Logo showWordmark={false} markSize={40} />
           <p className="mt-4 max-w-sm text-sm text-cream-light/80">
             {SITE.description}
           </p>

@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { RainbowStripe } from "@/components/ui/rainbow-stripe";
+import { Logo } from "@/components/brand/logo";
 
 const links = [
   { href: "/", label: "Home" },
@@ -26,14 +27,7 @@ export function Navbar() {
     <header className="sticky top-0 z-50 border-b-2 border-ink/80 bg-sky/85 backdrop-blur">
       <RainbowStripe className="rounded-none" />
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
-        <Link href="/" className="flex items-center gap-2" onClick={() => setOpen(false)}>
-          <span className="flex h-9 w-9 items-center justify-center rounded-full border-2 border-ink bg-gold text-lg font-black text-ink">
-            B
-          </span>
-          <span className="font-display text-xl font-bold tracking-tight">
-            BoringBrush
-          </span>
-        </Link>
+        <Logo href="/" onClick={() => setOpen(false)} />
 
         <div className="hidden items-center gap-1 md:flex">
           {links.map((link) => {

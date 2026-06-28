@@ -25,6 +25,7 @@
 
   --font-display: var(--font-fraunces), Georgia, serif;
   --font-sans: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-brand: var(--font-bricolage), ui-sans-serif, system-ui, sans-serif;
 
   --radius-card: 1.25rem;
 
@@ -72,6 +73,20 @@
     );
   }
 
+  .bb-rainbow-text {
+    background: linear-gradient(
+      90deg,
+      #ca2b1c,
+      #e8862e,
+      #ffd544,
+      #2b8d65,
+      #67548f
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
   .bb-text-stroke {
     -webkit-text-stroke: 1.5px var(--color-ink);
   }
@@ -102,5 +117,22 @@
 
   .bb-paint-edge:hover::before {
     opacity: 1;
+  }
+
+  .bb-marquee-track {
+    animation: bb-marquee 45s linear infinite;
+  }
+
+  .bb-marquee-track:hover {
+    animation-play-state: paused;
+  }
+
+  @keyframes bb-marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
   }
 }

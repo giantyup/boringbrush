@@ -4,6 +4,7 @@
  */
 export const SITE = {
   name: "BoringBrush",
+  favicon: "/icon.svg",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
   description:
     "BoringBrush transforms 3D avatars into physical collectibles through precision printing, artist finishing, and hand-painted detail.",
@@ -25,6 +26,7 @@ export const PARTNERS = [
       "Solvex dials in every layer, calibrating the printers, tuning supports, and producing clean, durable models ready for the brush.",
     href: SOCIALS.solvex,
     handle: "@_Solvex_",
+    image: "/partners/solvex.png",
   },
   {
     name: "The1",
@@ -33,5 +35,6 @@ export const PARTNERS = [
       "The1 brings each print to life with hand-mixed paint, careful shading, and the small details that give a piece its character.",
     href: SOCIALS.the1,
     handle: "@the1_im_here",
+    image: "/partners/the1.png",
   },
 ] as const;

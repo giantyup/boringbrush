@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Fraunces, DM_Sans } from "next/font/google";
+import { Fraunces, DM_Sans, Bricolage_Grotesque } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
@@ -15,6 +15,13 @@ const fraunces = Fraunces({
 const dmSans = DM_Sans({
   variable: "--font-dm-sans",
   subsets: ["latin"],
+  display: "swap",
+});
+
+const bricolage = Bricolage_Grotesque({
+  variable: "--font-bricolage",
+  subsets: ["latin"],
+  weight: ["700", "800"],
   display: "swap",
 });
 
@@ -38,16 +45,15 @@ export const metadata: Metadata = {
     title: `${SITE.name}: Digital avatars, printed into reality`,
     description: SITE.description,
     url: SITE.url,
-    images: [{ url: "/og-default.svg", width: 1200, height: 630, alt: SITE.name }],
+    images: [{ url: "/og-default.png", width: 600, height: 500, alt: SITE.name }],
   },
   twitter: {
     card: "summary_large_image",
     site: "@BoringBrush",
     title: `${SITE.name}: Digital avatars, printed into reality`,
     description: SITE.description,
-    images: ["/og-default.svg"],
+    images: ["/og-default.png"],
   },
-  icons: { icon: "/favicon.svg" },
 };
 
 export default function RootLayout({
@@ -58,7 +64,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${fraunces.variable} ${dmSans.variable} h-full`}
+      className={`${fraunces.variable} ${dmSans.variable} ${bricolage.variable} h-full`}
     >
       <body className="flex min-h-full flex-col bg-sky text-ink">
         <Navbar />

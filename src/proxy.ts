@@ -12,6 +12,6 @@ export const config = {
      * Match all request paths except static assets and image files so the
      * Supabase session is refreshed everywhere it matters.
      */
-    "/((?!_next/static|_next/image|favicon.svg|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)",
+    "/((?!_next/static|_next/image|logo.png|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)",
   ],
 };

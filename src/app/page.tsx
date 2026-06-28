@@ -6,7 +6,6 @@ import { FeaturedPrintsCarousel } from "@/components/home/featured-prints-carous
 import { PrintGrid } from "@/components/home/print-grid";
 import { Testimonials } from "@/components/home/testimonials";
 import { FAQ } from "@/components/home/faq";
-import { NewsletterCapture } from "@/components/home/newsletter-capture";
 import { PartnerCard } from "@/components/process/partner-card";
 import { ProcessTimeline } from "@/components/process/process-timeline";
 import { SectionHeading } from "@/components/ui/section-heading";
@@ -153,8 +152,6 @@ export default async function HomePage() {
           </div>
         </div>
       </section>
-
-      <NewsletterCapture />
     </>
   );
 }

@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { RainbowStripe } from "@/components/ui/rainbow-stripe";
 
 export function PartnerCard({
@@ -9,6 +10,7 @@ export function PartnerCard({
   blurb,
   handle,
   href,
+  image,
   index = 0,
 }: {
   name: string;
@@ -16,6 +18,7 @@ export function PartnerCard({
   blurb: string;
   handle: string;
   href: string;
+  image: string;
   index?: number;
 }) {
   return (
@@ -32,8 +35,14 @@ export function PartnerCard({
       <RainbowStripe className="rounded-none" />
       <div className="p-6">
         <div className="flex items-center gap-4">
-          <span className="flex h-14 w-14 items-center justify-center rounded-full border-2 border-ink bg-gold text-2xl font-black text-ink">
-            {name[0]}
+          <span className="relative h-14 w-14 shrink-0 overflow-hidden rounded-full border-2 border-ink">
+            <Image
+              src={image}
+              alt={`${name} profile`}
+              fill
+              sizes="56px"
+              className="object-cover"
+            />
           </span>
           <div>
             <h3 className="text-xl font-bold">{name}</h3>

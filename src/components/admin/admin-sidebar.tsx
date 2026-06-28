@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { RainbowStripe } from "@/components/ui/rainbow-stripe";
+import { Logo } from "@/components/brand/logo";
 
 const nav = [
   { href: "/admin", label: "Dashboard", icon: "▦", exact: true },
@@ -18,12 +19,11 @@ export function AdminSidebar() {
   return (
     <aside className="hidden w-60 shrink-0 border-r-2 border-ink bg-ink text-cream-light md:block">
       <div className="sticky top-0 flex h-screen flex-col">
-        <Link href="/admin" className="flex items-center gap-2 border-b border-cream-light/20 p-5">
-          <span className="flex h-9 w-9 items-center justify-center rounded-full border-2 border-cream-light bg-gold text-lg font-black text-ink">
-            B
-          </span>
-          <span className="font-display text-lg font-bold">Studio</span>
-        </Link>
+        <Logo
+          href="/admin"
+          showWordmark={false}
+          className="border-b border-cream-light/20 p-5"
+        />
         <RainbowStripe className="rounded-none" />
 
         <nav className="flex-1 space-y-1 p-3">
